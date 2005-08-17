@@ -21,6 +21,7 @@ BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	xorg-lib-xtrans-devel
+Obsoletes:	libXfont
 BuildRoot:	%{tmpdir}/libXfont-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -42,6 +43,7 @@ Requires:	xorg-proto-fontsproto-devel
 Requires:	freetype-devel
 Requires:	xorg-lib-libfontenc-devel
 Requires:	xorg-lib-xtrans-devel
+Obsoletes:	libXfont-devel
 
 
 %description devel
@@ -62,6 +64,7 @@ Summary:	Static libXfont libraries
 Summary(pl):	Biblioteki statyczne libXfont
 Group:		Development/Libraries
 Requires:	xorg-lib-libXfont-devel = %{version}-%{release}
+Obsoletes:	libXfont-static
 
 %description static
 X font libary used by the X server.
