@@ -9,7 +9,6 @@ License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXfont-%{version}.tar.bz2
 # Source0-md5:	7566ddf06a209656c0e4814d5739e8c1
-Patch0:		libXfont-freebsd.patch
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -79,8 +78,6 @@ Pakiet zawiera statyczn± bibliotekê libXfont.
 
 %prep
 %setup -q -n libXfont-%{version}
-%patch0 -p1
-
 
 %build
 %{__libtoolize}
