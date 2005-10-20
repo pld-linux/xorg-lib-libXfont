@@ -1,16 +1,16 @@
 Summary:	X font library used by the X server
 Summary(pl):	U¿ywana przez X serwer biblioteka fontów X
 Name:		xorg-lib-libXfont
-Version:	0.99.0
-Release:	0.03
+Version:	0.99.1
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXfont-%{version}.tar.bz2
-# Source0-md5:	7566ddf06a209656c0e4814d5739e8c1
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXfont-%{version}.tar.bz2
+# Source0-md5:	9c2bf686839ced33c0ea64e51bb98196
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	freetype-devel
+BuildRequires:	freetype-devel >= 2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libfontenc-devel
@@ -32,11 +32,10 @@ Summary:	Header files libXfont development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xorg-proto-fontcacheproto-devel
-Requires:	xorg-proto-fontsproto-devel
-Requires:	freetype-devel
+Requires:	freetype-devel >= 2
 Requires:	xorg-lib-libfontenc-devel
 Requires:	xorg-lib-xtrans-devel
+Requires:	xorg-proto-fontsproto-devel
 Obsoletes:	libXfont-devel
 
 %description devel
@@ -97,20 +96,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog
+%doc AUTHORS COPYING ChangeLog
 %attr(755,root,root) %{_libdir}/libXfont.so.*.*.*
-%attr(755,root,root) %{_libdir}/libfontcache.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXfont.so
-%attr(755,root,root) %{_libdir}/libfontcache.so
 %{_libdir}/libXfont.la
-%{_libdir}/libfontcache.la
 %{_includedir}/X11/fonts/*.h
 %{_pkgconfigdir}/xfont.pc
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libXfont.a
-%{_libdir}/libfontcache.a
