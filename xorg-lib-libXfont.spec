@@ -12,7 +12,7 @@ BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	freetype-devel >= 2
 BuildRequires:	libtool
-BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libfontenc-devel
 BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-proto-fontcacheproto-devel
