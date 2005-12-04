@@ -1,12 +1,12 @@
 Summary:	X font library used by the X server
 Summary(pl):	U¿ywana przez X serwer biblioteka fontów X
 Name:		xorg-lib-libXfont
-Version:	0.99.2
+Version:	0.99.3
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/libXfont-%{version}.tar.bz2
-# Source0-md5:	5cf961b00af1bcb2d55146e8dfb48c3f
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXfont-%{version}.tar.bz2
+# Source0-md5:	08ed359995921a1092c3bdcd6da8853a
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
