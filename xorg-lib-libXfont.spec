@@ -28,8 +28,8 @@ X font library used by the X server.
 U¿ywana przez X serwer biblioteka fontów X.
 
 %package devel
-Summary:	Header files libXfont development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXfont
+Summary:	Header files for libXfont library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	freetype-devel >= 2
@@ -42,7 +42,7 @@ Obsoletes:	libXfont-devel
 X font library used by the X server.
 
 This package contains the header files needed to develop programs that
-use these libXfont.
+use libXfont.
 
 %description devel -l pl
 U¿ywana przez X serwer biblioteka fontów X.
