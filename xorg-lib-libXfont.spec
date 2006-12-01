@@ -19,6 +19,7 @@ BuildRequires:	xorg-proto-fontcacheproto-devel
 BuildRequires:	xorg-proto-fontsproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXfont
+Obsoletes:	xorg-app-mkcfm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
