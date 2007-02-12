@@ -1,5 +1,5 @@
 Summary:	X font library used by the X server
-Summary(pl):	U¿ywana przez X serwer biblioteka fontów X
+Summary(pl.UTF-8):   UÅ¼ywana przez X serwer biblioteka fontÃ³w X
 Name:		xorg-lib-libXfont
 Version:	1.2.7
 Release:	1
@@ -25,12 +25,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X font library used by the X server.
 
-%description -l pl
-U¿ywana przez X serwer biblioteka fontów X.
+%description -l pl.UTF-8
+UÅ¼ywana przez X serwer biblioteka fontÃ³w X.
 
 %package devel
 Summary:	Header files for libXfont library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXfont
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	freetype-devel >= 2
@@ -45,15 +45,15 @@ X font library used by the X server.
 This package contains the header files needed to develop programs that
 use libXfont.
 
-%description devel -l pl
-U¿ywana przez X serwer biblioteka fontów X.
+%description devel -l pl.UTF-8
+UÅ¼ywana przez X serwer biblioteka fontÃ³w X.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXfont.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXfont.
 
 %package static
 Summary:	Static libXfont libraries
-Summary(pl):	Biblioteki statyczne libXfont
+Summary(pl.UTF-8):   Biblioteki statyczne libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXfont-static
@@ -63,10 +63,10 @@ X font library used by the X server.
 
 This package contains the static libXfont library.
 
-%description static -l pl
-U¿ywana przez X serwer biblioteka fontów X.
+%description static -l pl.UTF-8
+UÅ¼ywana przez X serwer biblioteka fontÃ³w X.
 
-Pakiet zawiera statyczn± bibliotekê libXfont.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXfont.
 
 %prep
 %setup -q -n libXfont-%{version}
