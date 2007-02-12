@@ -1,5 +1,5 @@
 Summary:	X font library used by the X server
-Summary(pl.UTF-8):   Używana przez X serwer biblioteka fontów X
+Summary(pl.UTF-8):	Używana przez X serwer biblioteka fontów X
 Name:		xorg-lib-libXfont
 Version:	1.2.7
 Release:	1
@@ -30,7 +30,7 @@ Używana przez X serwer biblioteka fontów X.
 
 %package devel
 Summary:	Header files for libXfont library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXfont
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	freetype-devel >= 2
@@ -53,7 +53,7 @@ używających biblioteki libXfont.
 
 %package static
 Summary:	Static libXfont libraries
-Summary(pl.UTF-8):   Biblioteki statyczne libXfont
+Summary(pl.UTF-8):	Biblioteki statyczne libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXfont-static
