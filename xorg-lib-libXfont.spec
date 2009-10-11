@@ -18,26 +18,40 @@ BuildRequires:	xorg-lib-libfontenc-devel
 BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-proto-fontcacheproto-devel
 BuildRequires:	xorg-proto-fontsproto-devel
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	zlib-devel
 Obsoletes:	libXfont
 Obsoletes:	xorg-app-mkcfm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-X font library used by the X server.
+libXfont provides the core of the legacy X11 font system, handling the
+index files (fonts.dir, fonts.alias, fonts.scale), the various font
+file formats, and rasterizing them. It is used by the X servers, the
+X Font Server (xfs), and some font utilities (bdftopcf for instance),
+but should not be used by normal X11 clients. X11 clients access fonts
+via either the new API's in libXft, or the legacy API's in libX11.
 
 %description -l pl.UTF-8
-Używana przez X serwer biblioteka fontów X.
+libXfont udostępnia główną część starego systemu fontów X11,
+obsługującą pliki indeksów (fonts.dir, fonts.alias, fonts.scale),
+różne formaty plików fontów oraz rasteryzację ich. Jest używana przez
+serwer X, serwer fontów X (xfs - X Font Server) i różne narzędzia
+związane z fontami (np. bdftopcf), ale nie powinna być używana przez
+normalne aplikacje klienckie X11. Te ostatnie powinny odwoływać się
+do fontów przez nowe API w libXft lub stare API w libX11.
 
 %package devel
 Summary:	Header files for libXfont library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	bzip2-devel
 Requires:	freetype-devel >= 2
 Requires:	xorg-lib-libfontenc-devel
 Requires:	xorg-lib-xtrans-devel
 Requires:	xorg-proto-fontsproto-devel
+Requires:	zlib-devel
 Obsoletes:	libXfont-devel
 
 %description devel
