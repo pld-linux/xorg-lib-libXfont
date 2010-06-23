@@ -8,7 +8,7 @@ Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXfont-%{version}.tar.bz2
 # Source0-md5:	503911759734998f9235b926eed82eb8
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	freetype-devel >= 2
@@ -18,7 +18,7 @@ BuildRequires:	xorg-lib-libfontenc-devel
 BuildRequires:	xorg-lib-xtrans-devel
 BuildRequires:	xorg-proto-fontcacheproto-devel
 BuildRequires:	xorg-proto-fontsproto-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.6
 BuildRequires:	zlib-devel
 Obsoletes:	libXfont
 Obsoletes:	xorg-app-mkcfm
