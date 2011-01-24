@@ -11,6 +11,7 @@ URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
+BuildRequires:	docbook-dtd44-xml
 BuildRequires:	freetype-devel >= 2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
@@ -29,8 +30,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 libXfont provides the core of the legacy X11 font system, handling the
 index files (fonts.dir, fonts.alias, fonts.scale), the various font
-file formats, and rasterizing them. It is used by the X servers, the
-X Font Server (xfs), and some font utilities (bdftopcf for instance),
+file formats, and rasterizing them. It is used by the X servers, the X
+Font Server (xfs), and some font utilities (bdftopcf for instance),
 but should not be used by normal X11 clients. X11 clients access fonts
 via either the new API's in libXft, or the legacy API's in libX11.
 
@@ -40,8 +41,8 @@ obsługującą pliki indeksów (fonts.dir, fonts.alias, fonts.scale),
 różne formaty plików fontów oraz rasteryzację ich. Jest używana przez
 serwer X, serwer fontów X (xfs - X Font Server) i różne narzędzia
 związane z fontami (np. bdftopcf), ale nie powinna być używana przez
-normalne aplikacje klienckie X11. Te ostatnie powinny odwoływać się
-do fontów przez nowe API w libXft lub stare API w libX11.
+normalne aplikacje klienckie X11. Te ostatnie powinny odwoływać się do
+fontów przez nowe API w libXft lub stare API w libX11.
 
 %package devel
 Summary:	Header files for libXfont library
