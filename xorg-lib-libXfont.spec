@@ -2,7 +2,7 @@ Summary:	X font library used by the X server
 Summary(pl.UTF-8):	Używana przez X serwer biblioteka fontów X
 Name:		xorg-lib-libXfont
 Version:	1.4.3
-Release:	1
+Release:	2
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXfont-%{version}.tar.bz2
@@ -106,6 +106,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/libXfont.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -122,7 +124,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/*.{html,css}
 %attr(755,root,root) %{_libdir}/libXfont.so
-%{_libdir}/libXfont.la
 %{_includedir}/X11/fonts/*.h
 %{_pkgconfigdir}/xfont.pc
 
