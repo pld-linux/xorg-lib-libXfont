@@ -1,12 +1,12 @@
 Summary:	X font library used by the X server
 Summary(pl.UTF-8):	Używana przez X serwer biblioteka fontów X
 Name:		xorg-lib-libXfont
-Version:	1.4.3
-Release:	2
+Version:	1.4.4
+Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXfont-%{version}.tar.bz2
-# Source0-md5:	6fb689cfe13d8d9460f4abb5bd88588d
+# Source0-md5:	f9942bc818d39094d7295b156a729393
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -15,12 +15,12 @@ BuildRequires:	docbook-dtd44-xml
 BuildRequires:	freetype-devel >= 2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xmlto >= 0.0.20
+BuildRequires:	xmlto >= 0.0.22
 BuildRequires:	xorg-lib-libfontenc-devel
 BuildRequires:	xorg-lib-xtrans-devel
-BuildRequires:	xorg-proto-fontcacheproto-devel
 BuildRequires:	xorg-proto-fontsproto-devel
-BuildRequires:	xorg-sgml-doctools >= 1.5
+BuildRequires:	xorg-proto-xproto-devel
+BuildRequires:	xorg-sgml-doctools >= 1.7
 BuildRequires:	xorg-util-util-macros >= 1.10
 BuildRequires:	zlib-devel
 Obsoletes:	libXfont
@@ -54,6 +54,7 @@ Requires:	freetype-devel >= 2
 Requires:	xorg-lib-libfontenc-devel
 Requires:	xorg-lib-xtrans-devel
 Requires:	xorg-proto-fontsproto-devel
+Requires:	xorg-proto-xproto-devel
 Requires:	zlib-devel
 Obsoletes:	libXfont-devel
 
@@ -122,7 +123,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/*.{html,css}
+%doc doc/*.html
 %attr(755,root,root) %{_libdir}/libXfont.so
 %{_includedir}/X11/fonts/*.h
 %{_pkgconfigdir}/xfont.pc
