@@ -71,8 +71,8 @@ Pakiet zawiera pliki nagłówkowe niezbędne do kompilowania programów
 używających biblioteki libXfont.
 
 %package static
-Summary:	Static libXfont libraries
-Summary(pl.UTF-8):	Biblioteki statyczne libXfont
+Summary:	Static libXfont library
+Summary(pl.UTF-8):	Biblioteka statyczna libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXfont-static
@@ -125,7 +125,21 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc doc/*.html
 %attr(755,root,root) %{_libdir}/libXfont.so
-%{_includedir}/X11/fonts/*.h
+%{_includedir}/X11/fonts/bdfint.h
+%{_includedir}/X11/fonts/bitmap.h
+%{_includedir}/X11/fonts/bufio.h
+%{_includedir}/X11/fonts/fntfil.h
+%{_includedir}/X11/fonts/fntfilio.h
+%{_includedir}/X11/fonts/fntfilst.h
+%{_includedir}/X11/fonts/fontconf.h
+%{_includedir}/X11/fonts/fontencc.h
+%{_includedir}/X11/fonts/fontmisc.h
+%{_includedir}/X11/fonts/fontshow.h
+%{_includedir}/X11/fonts/fontutil.h
+%{_includedir}/X11/fonts/fontxlfd.h
+%{_includedir}/X11/fonts/ft.h
+%{_includedir}/X11/fonts/ftfuncs.h
+%{_includedir}/X11/fonts/pcf.h
 %{_pkgconfigdir}/xfont.pc
 
 %files static
