@@ -2,11 +2,16 @@ Summary:	X font library used by the X server
 Summary(pl.UTF-8):	Używana przez X serwer biblioteka fontów X
 Name:		xorg-lib-libXfont
 Version:	1.5.4
-Release:	2
+Release:	3
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXfont-%{version}.tar.bz2
 # Source0-md5:	16eaf156edd79b68038b6a7c44aa9e9b
+Patch0:		CVE-2026-56001.patch
+Patch1:		CVE-2026-56002.patch
+Patch2:		CVE-2026-56003.patch
+Patch3:		CVE-2026-59679.patch
+Patch4:		CVE-2026-44950.patch
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -51,10 +56,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	bzip2-devel
 Requires:	freetype-devel >= 2
-Requires:	xorg-lib-libfontenc-devel
-Requires:	xorg-lib-xtrans-devel
 Requires:	xorg-proto-fontsproto-devel >= 2.1.3
-Requires:	xorg-proto-xproto-devel
 Requires:	zlib-devel
 Obsoletes:	libXfont-devel
 
@@ -89,6 +91,11 @@ Pakiet zawiera statyczną bibliotekę libXfont.
 
 %prep
 %setup -q -n libXfont-%{version}
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
+%patch -P3 -p1
+%patch -P4 -p1
 
 %build
 %{__libtoolize}
@@ -119,12 +126,12 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXfont.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libXfont.so.1
+%ghost %{_libdir}/libXfont.so.1
 
 %files devel
 %defattr(644,root,root,755)
 %doc doc/*.html
-%attr(755,root,root) %{_libdir}/libXfont.so
+%{_libdir}/libXfont.so
 %{_includedir}/X11/fonts/bdfint.h
 %{_includedir}/X11/fonts/bitmap.h
 %{_includedir}/X11/fonts/bufio.h
