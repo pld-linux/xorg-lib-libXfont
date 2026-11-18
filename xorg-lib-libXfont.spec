@@ -55,7 +55,7 @@ fontów przez nowe API w libXft lub stare API w libX11.
 Summary:	Header files for libXfont library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfont
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}-%{release}
+Requires:	%{name}%{?_isa} = %{version}-%{release}
 Requires:	bzip2-devel%{?_isa}
 Requires:	freetype-devel%{?_isa} >= 2
 Requires:	xorg-proto-fontsproto-devel >= 2.1.3
