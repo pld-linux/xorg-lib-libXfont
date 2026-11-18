@@ -56,10 +56,10 @@ Summary:	Header files for libXfont library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	bzip2-devel
-Requires:	freetype-devel >= 2
+Requires:	bzip2-devel%{?_isa}
+Requires:	freetype-devel%{?_isa} >= 2
 Requires:	xorg-proto-fontsproto-devel >= 2.1.3
-Requires:	zlib-devel
+Requires:	zlib-devel%{?_isa}
 Obsoletes:	libXfont-devel < 1.4.3
 
 %description devel
@@ -78,7 +78,7 @@ używających biblioteki libXfont.
 Summary:	Static libXfont library
 Summary(pl.UTF-8):	Biblioteka statyczna libXfont
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}-%{release}
+Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 Obsoletes:	libXfont-static < 1.4.3
 
 %description static
@@ -129,7 +129,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog README
-%attr(755,root,root) %{_libdir}/libXfont.so.*.*.*
+%{_libdir}/libXfont.so.*.*.*
 %ghost %{_libdir}/libXfont.so.1
 
 %files devel
