@@ -30,8 +30,8 @@ BuildRequires:	xorg-proto-xproto-devel
 BuildRequires:	xorg-sgml-doctools >= 1.7
 BuildRequires:	xorg-util-util-macros >= 1.10
 BuildRequires:	zlib-devel
-Obsoletes:	libXfont
-Obsoletes:	xorg-app-mkcfm
+Obsoletes:	libXfont < 1.4.3
+Obsoletes:	xorg-app-mkcfm < 1.0.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -60,7 +60,7 @@ Requires:	bzip2-devel
 Requires:	freetype-devel >= 2
 Requires:	xorg-proto-fontsproto-devel >= 2.1.3
 Requires:	zlib-devel
-Obsoletes:	libXfont-devel
+Obsoletes:	libXfont-devel < 1.4.3
 
 %description devel
 X font library used by the X server.
@@ -79,7 +79,7 @@ Summary:	Static libXfont library
 Summary(pl.UTF-8):	Biblioteka statyczna libXfont
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXfont-static
+Obsoletes:	libXfont-static < 1.4.3
 
 %description static
 X font library used by the X server.
