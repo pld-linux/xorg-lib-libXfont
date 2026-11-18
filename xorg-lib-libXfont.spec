@@ -2,7 +2,7 @@ Summary:	X font library used by the X server
 Summary(pl.UTF-8):	Używana przez X serwer biblioteka fontów X
 Name:		xorg-lib-libXfont
 Version:	1.5.4
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXfont-%{version}.tar.bz2
@@ -12,6 +12,8 @@ Patch1:		CVE-2026-56002.patch
 Patch2:		CVE-2026-56003.patch
 Patch3:		CVE-2026-59679.patch
 Patch4:		CVE-2026-44950.patch
+Patch5:		CVE-2026-109909.patch
+Patch6:		CVE-2026-109920.patch
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -96,6 +98,8 @@ Pakiet zawiera statyczną bibliotekę libXfont.
 %patch -P2 -p1
 %patch -P3 -p1
 %patch -P4 -p1
+%patch -P5 -p1
+%patch -P6 -p1
 
 %build
 %{__libtoolize}
